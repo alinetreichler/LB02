@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<title>Macarons</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Raleway:wght@300;600&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+	<meta charset="utf-16"/>
+	<link rel="icon" 
+      type="image/png" 
+      href="favicon_macarons.png"
+      sizes="32x32">
+</head>
+
+<body style="overflow-x:hidden;">
+<!-- Header -->
+	<nav class="Header" role="navigation">
+		<div class="row">
+			<div class="col-2 col-md-2">
+				<!-- Abstand -->
+			</div>
+			<div class="col-1 col-md-1">
+				<p class="Anker"> 
+					<a href="index1.html">Home</a>
+				</p>
+			</div>
+			<div class="col-1 col-md-1">
+				<p class="Anker"> 
+					<a href="index2.html">Über uns</a>
+				</p>
+			</div>
+			<div class="col-1 col-md-1">
+				<p class="Anker"> 
+					<a href="index3.html">Rezept</a>
+				</p>
+			</div>
+			<div class="Logo col-2 col-md-2">
+				<img class="Logo" src="logo_macarons.png">
+			</div>
+			<div class="col-1 col-md-1">
+				<p class="Anker"> 
+					<a href="index4.html">Galerie</a>
+				</p>
+			</div>
+			<div class="col-1 col-md-1">
+				<p class="Anker"> 
+					<a href="index5.html">Geschichte</a>
+				</p>
+			</div>
+			<div class="col-1 col-md-1">
+				<p class="Anker"> 
+					<a href="index6.html">Kontakt</a>
+				</p>
+			</div>
+			<div class="col-2 col-md-2">
+				<!-- Abstand -->
+			</div>
+		</div>
+	</nav>
+
+
+<!-- Galerie  -->
+		<div class="row">
+		<div class="col-md-3" id="galerie">
+			<!-- Abstand -->
+		</div>
+		<div class="col-md-6">
+			<h2 class="Geschichte-Titel">
+				Galerie
+			</h2>
+			<div class="row">
+				<div class="Geschichte Mobile-Vorstand col-md-12">
+					<p class="Geschichte">
+						Wie Macarons zum Instagram-Trend wurden...
+						<br>
+						<br>
+						Macarons sind einerseits einfach lecker aber auf der anderen Seite eben auch extrem fotogen. Dies ist wahrscheinlich auch der Grund dafür, dass die kleinen Gebäcke zum Instagram-Trend wurden. Über 1.7 Millionen gepostete Bilder findet man davon auf Instagram. Die Pastellfarben eignen sich anscheinend einfach perfekt als Requisite um Accessoires, lackierte Fingernägel und Kosmetik in Szene zu setzen. Nebst Macarons hat Frankreich auch sonst einiges zu bieten für das perfekte Instagram-Bild. Lass dich in diesem Blogbeitrag inspirieren. 
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<!-- Abstand -->
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="col-md-3" id="geschichte">
+			<!-- Abstand -->
+		</div>
+		<div class="col-md-6">
+			<p class="Geschichte-Quote">
+				Macaron is a dessert of lovely memories!
+			</p>
+		</div>
+	</div>
+		<div class="row">
+			<div class="col-md-3">
+				<!-- Abstand -->
+			</div>
+
+<section class="Bilder">			
+ <div class="carousel" data-carousel>
+        <button class="carousel-button prev" data-carousel-button="prev">&#10094;</button>
+        <button class="carousel-button next" data-carousel-button="next">&#10095;</button>
+        <ul data-slides>
+            <li class="slide" data-active>
+                <img src="Macarons1.png" alt="Macarons">
+            </li>
+            <li class="slide">
+                <img src="Macarons2.png" alt="Macarons">
+            </li>
+            <li class="slide">
+                <img src="Macarons3.png" alt="Macarons">
+            </li>
+            <li class="slide">
+                <img src="Macarons4.png" alt="Macarons">
+            </li>
+            <li class="slide">
+                <img src="Macarons_Geschichte.jpg" alt="Macarons">
+            </li>
+        </ul>
+    </div>
+ </section>
+
+<script>
+
+    const buttons = document.querySelectorAll("[data-carousel-button]")
+
+
+
+    buttons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const offset = button.dataset.carouselButton === "next" ? 1 : -1
+            const slides = button
+
+                .closest("[data-carousel]")
+
+                .querySelector("[data-slides]")
+
+
+
+            const activeSlide = slides.querySelector("[data-active]")
+
+            let newIndex = [...slides.children].indexOf(activeSlide) + offset
+
+            if (newIndex < 0) newIndex = slides.children.length - 1
+            if (newIndex >= slides.children.length) newIndex = 0
+            slides.children[newIndex].dataset.active = true
+            delete activeSlide.dataset.active
+
+        })
+
+    })
+  </script>
+
+
+
+<div class="row">
+			<div class="col-md-3">
+				<!-- Abstand -->
+			</div>
+		<div class="col-md-6">
+			
+
+		</div>	
+		<div class="col-3 col-md-2">
+			<!-- Abstand -->
+		</div>
+</div>
+
+
+
+</body>
+
+<!-- Footer -->
+	<footer class="footer2">	
+		<p class="footer-text">
+			Copyright 2022 <a class="Footer-Text" target="_blank" href="https://www.bzz.ch"> @Bildungszentrum Zürichsee </a> | All Rights Reserved
+		</p>
+	</footer>
+
+
+</html>
